@@ -1077,7 +1077,7 @@ function HomePage({ navigate }: { navigate: NavigateFn }) {
             </p>
           </div>
           <div className="flex gap-6">
-            {["LinkedIn", "Dribbble", "Read.cv"].map((s) => (
+            {["LinkedIn"].map((s) => (
               <span
                 key={s}
                 className="text-sm text-[#6B5642] hover:text-[#3D2B1F] transition-colors cursor-pointer"
@@ -1091,7 +1091,7 @@ function HomePage({ navigate }: { navigate: NavigateFn }) {
             className="text-[10px] text-[#6B5642] tracking-[0.1em]"
             style={{ fontFamily: "'DM Mono', monospace" }}
           >
-            © 2024 — Tous droits réservés
+            © 2026 — Tous droits réservés
           </p>
         </div>
       </footer>
