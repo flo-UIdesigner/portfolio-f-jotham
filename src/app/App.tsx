@@ -1078,13 +1078,15 @@ function HomePage({ navigate }: { navigate: NavigateFn }) {
           </div>
           <div className="flex gap-6">
             {["LinkedIn"].map((s) => (
-              <span
-                key={s}
-                className="text-sm text-[#6B5642] hover:text-[#3D2B1F] transition-colors cursor-pointer"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                {s}
-              </span>
+             <a
+  href="https://www.linkedin.com/in/florence-jotham"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm text-[#6B5642] hover:text-[#3D2B1F] transition-colors cursor-pointer"
+  style={{ fontFamily: "'DM Sans', sans-serif" }}
+>
+  LinkedIn
+</a>
             ))}
           </div>
           <p
