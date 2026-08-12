@@ -2238,6 +2238,7 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
               </div>
 
               {/* Links */}
+              {/* Links */}
               <div>
                 {[
                   { name: "LinkedIn", url: "https://www.linkedin.com/in/florence-jotham" },
@@ -2252,10 +2253,17 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                     style={{ borderBottom: "1px solid rgba(61,43,31,0.08)" }}
                   >
                     <span
-                      className="text-sm text-[#6B5642]"
+                      className="text-sm text-[#6B5642] flex items-center gap-2"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      {link.name}
+                      {link.name === "LinkedIn" ? (
+                        <>
+                          <i className="fa-brands fa-square-linkedin text-xl" style={{ color: "#C9502F" }}></i>
+                          <span>LinkedIn</span>
+                        </>
+                      ) : (
+                        link.name
+                      )}
                     </span>
                     <span
                       className="text-xs"
@@ -2269,14 +2277,6 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                   </a>
                 ))}
               </div>
-            </div>
-          </RevealBlock>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 // ── Contact Page ───────────────────────────────────────────────────────────────
 function ContactPage() {
   const [form, setForm] = useState({
