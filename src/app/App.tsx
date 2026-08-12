@@ -2289,7 +2289,7 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
     </a>
   ))}
 </div>
-  );
+  );//
 } 
 // ── Contact Page ───────────────────────────────────────────────────────────────
 function ContactPage() {
