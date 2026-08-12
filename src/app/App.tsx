@@ -2271,8 +2271,6 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                   </a>
                 ))}
               </div>
-                  )
-                )}
               </div>
             </div>
           </RevealBlock>
