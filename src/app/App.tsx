@@ -1077,7 +1077,7 @@ function HomePage({ navigate }: { navigate: NavigateFn }) {
             </p>
           </div>
           <div className="flex gap-6">
-            {["LinkedIn"].map((s) => (
+            {["LinkedIn"].map => (
              <a
   href="https://www.linkedin.com/in/florence-jotham"
   target="_blank"
