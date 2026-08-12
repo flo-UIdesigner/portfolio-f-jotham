@@ -2236,9 +2236,7 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                   <VinylRecord track={TRACKS[1]} size={90} />
                 </div>
               </div>
-
-              {/* Links */}
-              {/* Links */}
+{/* Links */}
               <div>
                 {[
                   { name: "LinkedIn", url: "https://www.linkedin.com/in/florence-jotham" },
@@ -2277,8 +2275,13 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                   </a>
                 ))}
               </div>
-              );
-              }
+            </div>
+          </RevealBlock>
+        </div>
+      </div>
+    </div>
+  );
+}
 // ── Contact Page ───────────────────────────────────────────────────────────────
 function ContactPage() {
   const [form, setForm] = useState({
