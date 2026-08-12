@@ -2277,6 +2277,7 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                   </a>
                 ))}
               </div>
+              }
 // ── Contact Page ───────────────────────────────────────────────────────────────
 function ContactPage() {
   const [form, setForm] = useState({
