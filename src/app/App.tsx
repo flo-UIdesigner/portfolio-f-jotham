@@ -2265,11 +2265,12 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                     ),
                     url: "https://www.linkedin.com/in/florence-jotham",
                   },
+  /*
                   {
                     id: "email",
                     label: "jotham.florence@gmail.com",
                     url: "mailto:jotham.florence@gmail.com",
-                  },
+                  },*/
                 ].map((link) => (
                   <a
                     key={link.id}
