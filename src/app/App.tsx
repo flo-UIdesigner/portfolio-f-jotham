@@ -2306,6 +2306,7 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
   );
 }             
 // ── Contact Page ───────────────────────────────────────────────────────────────
+// ── Contact Page ───────────────────────────────────────────────────────────────
 function ContactPage() {
   const [form, setForm] = useState({
     name: "",
@@ -2313,11 +2314,32 @@ function ContactPage() {
     project: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setLoading(true);
+
+    const GOOGLE_SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycbynQrcwL6x-I-Jrp-ybxrhmLax9u36fXRBRvpccBUqNKc-6Oj2JbyUr3ojgRyEOm8VeRw/exec";
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      setLoading(false);
+      setSent(true);
+    } catch (error) {
+      console.error("Erreur lors de l'envoi :", error);
+      setLoading(false);
+    }
   };
 
   const inputStyle = {
@@ -2499,7 +2521,8 @@ function ContactPage() {
               <div className="pt-3">
                 <button
                   type="submit"
-                  className="w-full text-sm py-4 rounded-full transition-all duration-300"
+                  disabled={loading}
+                  className="w-full text-sm py-4 rounded-full transition-all duration-300 disabled:opacity-50 cursor-pointer"
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
                     backgroundColor: "#3D2B1F",
@@ -2514,7 +2537,7 @@ function ContactPage() {
                       "#3D2B1F")
                   }
                 >
-                  Envoyer le message
+                  {loading ? "Envoi en cours..." : "Envoyer le message"}
                 </button>
               </div>
             </form>
