@@ -2239,29 +2239,36 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
 
               {/* Links */}
               <div>
-                {["LinkedIn", "Dribbble", "Read.cv", "hello@florencejotham.fr"].map(
-                  (link) => (
-                    <div
-                      key={link}
-                      className="flex items-center justify-between py-3"
-                      style={{ borderBottom: "1px solid rgba(61,43,31,0.08)" }}
+                {[
+                  { name: "LinkedIn", url: "https://www.linkedin.com/in/florencejotham" },
+                  { name: "hello@florencejotham.fr", url: "mailto:hello@florencejotham.fr" },
+                ].map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.url}
+                    target={link.url.startsWith("mailto:") ? "_self" : "_blank"}
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between py-3 hover:opacity-80 transition-opacity cursor-pointer block"
+                    style={{ borderBottom: "1px solid rgba(61,43,31,0.08)" }}
+                  >
+                    <span
+                      className="text-sm text-[#6B5642]"
+                      style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      <span
-                        className="text-sm text-[#6B5642]"
-                        style={{ fontFamily: "'DM Sans', sans-serif" }}
-                      >
-                        {link}
-                      </span>
-                      <span
-                        className="text-xs"
-                        style={{
-                          fontFamily: "'DM Mono', monospace",
-                          color: "#B8873C",
-                        }}
-                      >
-                        ↗
-                      </span>
-                    </div>
+                      {link.name}
+                    </span>
+                    <span
+                      className="text-xs"
+                      style={{
+                        fontFamily: "'DM Mono', monospace",
+                        color: "#B8873C",
+                      }}
+                    >
+                      ↗
+                    </span>
+                  </a>
+                ))}
+              </div>
                   )
                 )}
               </div>
