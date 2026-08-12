@@ -2240,7 +2240,7 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
               {/* Links */}
               <div>
                 {[
-                  { name: "LinkedIn", url: "https://www.linkedin.com/in/florencejotham" },
+                  { name: "LinkedIn", url: "https://www.linkedin.com/in/florence-jotham" },
                   { name: "hello@florencejotham.fr", url: "mailto:hello@florencejotham.fr" },
                 ].map((link) => (
                   <a
