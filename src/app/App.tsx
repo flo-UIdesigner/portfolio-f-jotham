@@ -2348,7 +2348,7 @@ function ContactPage() {
             <div>
               {[
                 { label: "Email", value: "hello@florencejotham.fr" },
-                { label: "Disponibilité", value: "Août 2024 →" },
+                { label: "Disponibilité", value: "Mars 2027 →" },
                 { label: "Localisation", value: "Paris (remote ok)" },
               ].map(({ label, value }) => (
                 <div
@@ -2393,7 +2393,7 @@ function ContactPage() {
                 className="text-[#6B5642]"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Je reviens vers vous dans les 48h.
+                Je reviens vers vous dès que possible.
               </p>
             </div>
           ) : (
