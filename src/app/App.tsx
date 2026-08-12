@@ -2239,11 +2239,19 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
 {/* Links */}
               <div>
                 {[
-                  { name: "LinkedIn", url: "https://www.linkedin.com/in/florence-jotham" },
-                  { name: "hello@florencejotham.fr", url: "mailto:hello@florencejotham.fr" },
+                  {
+                    id: "linkedin",
+                    label: <i className="fa-brands fa-square-linkedin text-2xl" style={{ color: "#C9502F" }}></i>,
+                    url: "https://www.linkedin.com/in/florence-jotham",
+                  },
+                  {
+                    id: "email",
+                    label: "hello@florencejotham.fr",
+                    url: "mailto:hello@florencejotham.fr",
+                  },
                 ].map((link) => (
                   <a
-                    key={link.name}
+                    key={link.id}
                     href={link.url}
                     target={link.url.startsWith("mailto:") ? "_self" : "_blank"}
                     rel="noopener noreferrer"
@@ -2251,17 +2259,10 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                     style={{ borderBottom: "1px solid rgba(61,43,31,0.08)" }}
                   >
                     <span
-                      className="text-sm text-[#6B5642] flex items-center gap-2"
+                      className="text-sm text-[#6B5642]"
                       style={{ fontFamily: "'DM Sans', sans-serif" }}
                     >
-                      {link.name === "LinkedIn" ? (
-                        <>
-                          <i className="fa-brands fa-square-linkedin text-xl" style={{ color: "#C9502F" }}></i>
-                          <span>LinkedIn</span>
-                        </>
-                      ) : (
-                        link.name
-                      )}
+                      {link.label}
                     </span>
                     <span
                       className="text-xs"
@@ -2281,7 +2282,7 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
       </div>
     </div>
   );
-}
+} // 
 // ── Contact Page ───────────────────────────────────────────────────────────────
 function ContactPage() {
   const [form, setForm] = useState({
