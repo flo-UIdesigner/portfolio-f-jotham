@@ -2241,7 +2241,7 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                 {[
                   {
                     id: "linkedin",
-                    label: <i className="fa-brands fa-square-linkedin text-2xl" style={{ color: "#C9502F" }}></i>,
+                    label: <i className="fa-brands fa-linkedin text-2xl" style={{ color: "#C9502F" }}></i>,
                     url: "https://www.linkedin.com/in/florence-jotham",
                   },
                   {
