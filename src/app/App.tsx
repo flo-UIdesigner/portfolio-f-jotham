@@ -1076,19 +1076,17 @@ function HomePage({ navigate }: { navigate: NavigateFn }) {
               Designer UX/UI Freelance — Paris
             </p>
           </div>
-          <div className="flex gap-6">
-            {["LinkedIn"].map => (
-             <a
-  href="https://www.linkedin.com/in/florence-jotham"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-sm text-[#6B5642] hover:text-[#3D2B1F] transition-colors cursor-pointer"
-  style={{ fontFamily: "'DM Sans', sans-serif" }}
->
-  LinkedIn
-</a>
-            ))}
-          </div>
+         <div className="flex gap-6">
+  <a
+    href="https://www.linkedin.com/in/florence-jotham"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sm text-[#6B5642] hover:text-[#3D2B1F] transition-colors cursor-pointer"
+    style={{ fontFamily: "'DM Sans', sans-serif" }}
+  >
+    LinkedIn
+  </a>
+</div>
           <p
             className="text-[10px] text-[#6B5642] tracking-[0.1em]"
             style={{ fontFamily: "'DM Mono', monospace" }}
@@ -2269,14 +2267,13 @@ function AboutPage({ navigate }: { navigate: NavigateFn }) {
                       ↗
                     </span>
                   </a>
-    
-              </div>
-            
+                ))}
               </div>
             </div>
           </RevealBlock>
         </div>
       </div>
+    </div>
   );
 }
 
