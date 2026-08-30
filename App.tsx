@@ -1093,7 +1093,7 @@ function HomePage({ navigate }: { navigate: NavigateFn }) {
           >
             © 2024 — Tous droits réservés
           </p>
-          <a href="/mentions-legales.html" className="hover:underline">
+          <a href="/mentions-legales.html" className="hover:underline"> Mentions légales
 </a>
         </div>
       </footer>
