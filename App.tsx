@@ -1076,6 +1076,7 @@ function HomePage({ navigate }: { navigate: NavigateFn }) {
               Designer UX/UI Freelance — Paris
             </p>
           </div>
+
           <div className="flex gap-6">
             {["LinkedIn", "Dribbble", "Read.cv"].map((s) => (
               <span
@@ -1086,16 +1087,23 @@ function HomePage({ navigate }: { navigate: NavigateFn }) {
                 {s}
               </span>
             ))}
-          </div>          
-          <p
-            className="text-[10px] text-[#6B5642] tracking-[0.1em]"
-            style={{ fontFamily: "'DM Mono', monospace" }}
-          >
-            © 2024 — Tous droits réservés
-          </p>
-          <a href="/mentions-legales.html" className="text-[10px] text-[#6B5642] hover:text-[#3D2B1F] tracking-[0.1em] underline transition-colors"
-              style={{ fontFamily: "'DM Mono', monospace" }}> Mentions légales
-</a>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-6">
+            <p
+              className="text-[10px] text-[#6B5642] tracking-[0.1em]"
+              style={{ fontFamily: "'DM Mono', monospace" }}
+            >
+              © 2026 — Tous droits réservés
+            </p>
+            <a
+              href="/mentions-legales.html"
+              className="text-[10px] text-[#6B5642] hover:text-[#3D2B1F] tracking-[0.1em] underline transition-colors"
+              style={{ fontFamily: "'DM Mono', monospace" }}
+            >
+              Mentions légales
+            </a>
+          </div>
         </div>
       </footer>
     </div>
