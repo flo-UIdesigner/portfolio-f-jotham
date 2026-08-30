@@ -1086,13 +1086,15 @@ function HomePage({ navigate }: { navigate: NavigateFn }) {
                 {s}
               </span>
             ))}
-          </div>
+          </div>          
           <p
             className="text-[10px] text-[#6B5642] tracking-[0.1em]"
             style={{ fontFamily: "'DM Mono', monospace" }}
           >
             © 2024 — Tous droits réservés
           </p>
+          <a href="/mentions-legales.html" className="hover:underline">
+
         </div>
       </footer>
     </div>
